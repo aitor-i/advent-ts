@@ -11,9 +11,7 @@ export function distributeGifts(packOfGifts: string[], reindeers: string[]) {
       (totalLoad, reindeerLoad) => totalLoad + reindeerLoad,
       0
     ) * 2;
-  const realDistribution = Number(
-    (reindeerTotalLoad / giftsTotalWeight).toString().split(".")[0]
-  );
+  const realDistribution = Math.floor(reindeerTotalLoad / giftsTotalWeight);
 
   return realDistribution;
 }
