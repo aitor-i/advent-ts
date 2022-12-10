@@ -6,8 +6,8 @@ export function getGiftsToRefill(a1: string[], a2: string[], a3: string[]) {
     store2: string[],
     giftToSearch: string
   ) => {
-    const isInStore1 = store1.find((gift) => gift == giftToSearch) && true;
-    const isInStore2 = store2.find((gift) => gift == giftToSearch) && true;
+    const isInStore1 = store1.find((gift) => gift == giftToSearch);
+    const isInStore2 = store2.find((gift) => gift == giftToSearch);
 
     return { isInStore1, isInStore2 };
   };
