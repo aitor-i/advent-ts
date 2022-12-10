@@ -9,14 +9,14 @@ export function getMaxGifts(
 
   if (filteredCities.length == 0) return 0;
 
-  const permutations: Array<number[]> = [[]];
+  const permutations: number[][] = [[]];
 
   filteredCities.forEach((cityGifts) => {
-    const addNewPermutations = permutations.map((permutations) => [
-      ...permutations,
+    const permutationsWithGifts = permutations.map((permutation) => [
+      ...permutation,
       cityGifts,
     ]);
-    permutations.push(...addNewPermutations);
+    permutations.push(...permutationsWithGifts);
   });
 
   const filteredPermutations = permutations
