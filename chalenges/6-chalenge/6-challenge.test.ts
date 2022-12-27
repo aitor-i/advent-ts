@@ -8,4 +8,11 @@ describe("createCube", () => {
 
     expect(cube).toBe(expected);
   });
+
+  it("should create a 1 cube", () => {
+    const cube = createCube(1);
+    const expected = "/\\_\\\n\\/_/";
+
+    expect(cube).toBe(expected);
+  });
 });
