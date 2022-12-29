@@ -10,4 +10,7 @@ describe("Count time", () => {
     const leds = [0, 0, 0, 1];
     expect(countTime(leds)).toBe(21);
   });
+  it("should return 28 on [0, 0, 1, 0, 0] ", () => {
+    expect(countTime([0, 0, 1, 0, 0])).toBe(28);
+  });
 });
