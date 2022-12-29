@@ -6,4 +6,8 @@ describe("Count time", () => {
 
     expect(countTime(leds)).toBe(7);
   });
+  it("should return 21", () => {
+    const leds = [0, 0, 0, 1];
+    expect(countTime(leds)).toBe(21);
+  });
 });
